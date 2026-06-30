@@ -1,0 +1,17 @@
+# Gitignore for web projects
+*.DS_Store
+.env
+.vscode/
+
+# IDE-specific files
+.idea/
+*.iml
+
+# Node.js and dependencies (if applicable, though not for this pure CSS project)
+node_modules/
+
+# macOS specific
+.DS_Store
+
+# Thumbnails
+.thumbnails/

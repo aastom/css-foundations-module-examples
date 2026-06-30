@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 - The CSS Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The CSS Box Model</h1>
+
+    <p>Every HTML element is a box. The CSS Box Model describes how these boxes are rendered on a webpage.</p>
+
+    <section class="box-model-visual">
+        <h2>Understanding the Components</h2>
+        <div class="content-box">
+            <p><strong>Content Area (blue)</strong>: This is where your actual content (text, images, video) resides.</p>
+        </div>
+        <div class="padding-box">
+            <p><strong>Padding Area (light green)</strong>: The space between the content and the border. It's inside the border.</p>
+        </div>
+        <div class="border-box">
+            <p><strong>Border Area (gray)</strong>: The border that goes around the padding and content. You can style its width, style, and color.</p>
+        </div>
+        <div class="margin-box">
+            <p><strong>Margin Area (light red)</strong>: The space outside the border, separating the element from other elements.</p>
+        </div>
+    </section>
+
+    <section class="box-sizing-example">
+        <h2><code>box-sizing</code> Property: <code>content-box</code> vs <code>border-box</code></h2>
+        <p>The <code>box-sizing</code> property allows you to define how the width and height of an element are calculated.</p>
+
+        <div class="sizing-container">
+            <div class="example-box content-box-default">
+                <p><code>content-box</code> (Default)</p>
+                <p>Width: 200px</p>
+                <p>Padding: 20px</p>
+                <p>Border: 5px</p>
+                <p>Actual Width: 200 + (20*2) + (5*2) = 250px</p>
+            </div>
+
+            <div class="example-box border-box-set">
+                <p><code>border-box</code> (Recommended)</p>
+                <p>Width: 200px</p>
+                <p>Padding: 20px</p>
+                <p>Border: 5px</p>
+                <p>Actual Width: 200px</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="practical-application">
+        <h2>Practical Application</h2>
+        <div class="card">
+            <h3>Product Card</h3>
+            <img src="https://via.placeholder.com/100x100?text=Product" alt="Product Image">
+            <p>A sample product description. Padding ensures text doesn't touch the edges, margin separates cards.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="card">
+            <h3>Service Card</h3>
+            <img src="https://via.placeholder.com/100x100?text=Service" alt="Service Image">
+            <p>Another service offering. Margins provide spacing between cards for better readability.</p>
+            <button>Learn More</button>
+        </div>
+    </section>
+
+</body>
+</html>

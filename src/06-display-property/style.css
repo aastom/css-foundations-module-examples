@@ -1,0 +1,105 @@
+/*
+ * src/06-display-property/style.css
+ * The CSS Display Property Examples
+ *
+ * This file demonstrates the different behaviors of elements based on their
+ * `display` property: `block`, `inline`, `inline-block`, and `none`.
+ */
+
+/* Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 20px;
+    background-color: #f7f9fc; /* Very light blue background */
+    color: #34495e; /* Dark blue-grey text */
+    line-height: 1.6;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+h2 {
+    color: #3498db; /* Blue subheading */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* --- display: block --- */
+.block-element-one,
+.block-element-two {
+    background-color: #e6f7ff; /* Light blue */
+    border: 1px solid #91d5ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 80%; /* Takes up 80% of parent width */
+    text-align: center;
+    color: #1890ff;
+    font-weight: bold;
+}
+
+/* --- display: inline --- */
+.inline-element-one,
+.inline-element-two,
+.inline-element-link {
+    background-color: #fffbe6; /* Light yellow */
+    border: 1px solid #ffe58f;
+    padding: 5px 10px; /* Padding affects horizontal space */
+    margin-right: 10px; /* Margin affects horizontal space */
+    /* width, height, margin-top, margin-bottom will NOT apply to inline elements */
+    color: #faad14;
+    text-decoration: none;
+}
+
+.inline-element-link:hover {
+    text-decoration: underline;
+}
+
+/* --- display: inline-block --- */
+.inline-block-element {
+    display: inline-block; /* Behaves inline, but respects block properties */
+    background-color: #f6ffed; /* Light green */
+    border: 1px solid #b7eb8f;
+    padding: 15px;
+    margin: 10px; /* Margins now apply vertically and horizontally */
+    width: 150px; /* Width now applies */
+    height: 80px; /* Height now applies */
+    text-align: center;
+    line-height: 50px; /* Vertically center text with line-height */
+    color: #52c41a;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* --- display: none --- */
+.hidden-element {
+    display: none; /* Element is completely removed from the document flow */
+    background-color: #ffccc7;
+    border: 1px solid #ffa39e;
+    padding: 15px;
+    margin: 10px;
+    color: #f5222d;
+    font-weight: bold;
+}

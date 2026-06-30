@@ -1,0 +1,161 @@
+/*
+ * src/04-text-colors-backgrounds/style.css
+ * Basic Styling Properties: Text, Colors & Backgrounds
+ *
+ * This file demonstrates foundational CSS properties for styling text,
+ * element colors, and backgrounds.
+ */
+
+/* Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+    margin: 20px;
+    background-color: #f8f9fa; /* Light grey background */
+    color: #343a40; /* Dark grey text */
+    line-height: 1.6;
+}
+
+h1 {
+    color: #007bff; /* Blue heading */
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #007bff;
+}
+
+h2 {
+    color: #28a745; /* Green subheading */
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Text Styling Properties --- */
+
+.font-styles {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Specific font stack */
+    font-size: 1.2em; /* Relative font size */
+    font-weight: bold; /* Make text bold */
+    color: #6c757d; /* Muted grey color */
+}
+
+.color-align {
+    color: #17a2b8; /* Info blue color */
+    text-align: center; /* Center align text */
+    margin-top: 15px;
+    font-size: 1.1em;
+}
+
+.highlight-text {
+    color: deepskyblue; /* Specific color for highlighted span */
+    background-color: rgba(25, 180, 230, 0.1);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.line-height-example {
+    line-height: 2; /* Double the line height for readability */
+    background-color: #e2f0d9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+/* --- Colors & Backgrounds --- */
+
+.color-example {
+    color: #2c3e50; /* Darker text color using hex code */
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.background-color-example {
+    background-color: rgb(46, 204, 113); /* Green background using RGB */
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.background-image-example {
+    background-image: url('https://via.placeholder.com/400x150/f0f0f0/999999?text=Background+Image'); /* Placeholder image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Cover the entire element */
+    background-position: center; /* Center the image */
+    height: 150px; /* Set a height to see the background */
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    display: flex; /* Using flexbox to center content for demonstration */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.background-image-example p {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0; /* Override default paragraph margin */
+}
+
+.background-gradient-example {
+    background-image: linear-gradient(to right, #007bff, #28a745); /* Linear gradient background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* --- Combined Styling Example --- */
+.card {
+    background-color: #e9ecef; /* Light grey background */
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #6f42c1; /* Purple heading */
+    font-family: 'Georgia', serif;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #495057;
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    background-color: #6f42c1;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.card a:hover {
+    background-color: #5a359d;
+}

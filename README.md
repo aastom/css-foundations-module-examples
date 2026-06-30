@@ -53,6 +53,14 @@ This module covers the following foundational CSS topics, with practical example
     Simply open the `index.html` file of the desired example directory in your web browser. There's no need for a local server or build tools.
     For instance, to view the first example, open `css-foundations-module-examples/src/01-intro-inclusion/index.html` in your browser.
 
+## 📚 Documentation
+
+All formal documentation for this learning module, including detailed explanations, the full learning roadmap, and supporting references, is published to Google Drive:
+
+*   **Drive Folder:** [Basics of CSS Foundational Learning Module — R&D Lab](https://drive.google.com/drive/folders/1mmL5CZzNbQAPz5mwwKdKtWHDKOsHOLaj)
+*   **Documentation Bundle:** [Basics of CSS Foundational Learning Module - Documentation Bundle](https://docs.google.com/document/d/1PtJr6HBnt_jC2g0AWoU7MOC_IKgsIK8UnHTyW6hcmuU/edit?usp=drivesdk)
+*   **Learning Roadmap:** [Basics of CSS Foundational Learning Module - Learning Roadmap](https://docs.google.com/document/d/1IYwyQm5npwuVxfiGQ6UiCTmF65Cyg-haZ6JE2ca59S0/edit?usp=drivesdk)
+
 ## References
 
 *   [MDN Web Docs - CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -60,3 +68,4 @@ This module covers the following foundational CSS topics, with practical example
 *   [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 *   [A Complete Guide to CSS Grid](https://css-tricks.com/snippets/css/a-guide-to-css-grid/)
 *   [Specificity Calculator](https://specificity.keegan.st/)
+*   **Saved PDF Reference:** [Specificity Calculator.pdf](https://drive.google.com/file/d/1DoBgkPdPk7IddMGy_aH79OufUDugpswT/view?usp=drivesdk)

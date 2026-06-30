@@ -1,0 +1,51 @@
+/*
+ * src/01-intro-inclusion/style.css
+ * External Stylesheet Example
+ *
+ * This file demonstrates how styles are applied from an external stylesheet.
+ * This is generally the recommended and most maintainable way to include CSS
+ * for larger projects.
+ */
+
+/* Styling for the body element */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Styling for the first-level heading */
+h1 {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* This style targets elements with the class 'external-style-example' */
+.external-style-example {
+    background-color: #e8f5e9; /* Light green background */
+    color: #c0392b; /* Red text color */
+    padding: 15px;
+    border: 1px solid #27ae60;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+/* This style targets the div with the ID 'combination-example' */
+#combination-example {
+    margin-top: 30px;
+    padding: 20px;
+    border: 2px dashed #9b59b6;
+    background-color: #f3e8f7;
+}
+
+/* Styles within #combination-example affecting paragraph elements */
+#combination-example p {
+    font-size: 1.1em;
+    color: #8e44ad;
+}
+
+/* Best practice: Use external stylesheets for most of your CSS.
+ * This keeps your HTML clean and makes your styles reusable and easy to manage.
+ */

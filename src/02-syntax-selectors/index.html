@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - CSS Syntax & Core Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS Syntax and Selectors</h1>
+
+    <!-- Type Selector Example -->
+    <p>This is a paragraph. Type selectors target all instances of an HTML element.</p>
+    <p>Another paragraph. Both paragraphs should be styled by the 'p' type selector in `style.css`.</p>
+
+    <!-- Class Selector Example -->
+    <div class="info-box">
+        <p>This is a div with the class "info-box".</p>
+        <p>Class selectors are reusable and can be applied to multiple elements.</p>
+    </div>
+    <span class="info-box">This is a span with the same "info-box" class.</span>
+
+    <!-- ID Selector Example -->
+    <h2 id="unique-heading">This heading has a unique ID.</h2>
+    <p>ID selectors should be unique to a single element on a page. They are very specific.</p>
+
+    <!-- Universal Selector Example -->
+    <h3>Universal Selector (brief mention)</h3>
+    <p>The universal selector (`*`) targets every element on the page. It's often used for global resets.</p>
+
+    <!-- Grouping Selectors Example -->
+    <h4>Grouping Selectors</h4>
+    <p>This paragraph and the h4 above it are styled together using grouped selectors.</p>
+    <a href="#">This link is also grouped with the h4 and p for styling.</a>
+
+    <div class="card">
+        <p>This card demonstrates combining selectors. It's a div with class 'card'</p>
+        <span class="highlight">This text is highlighted.</span>
+    </div>
+
+    <div class="card important">
+        <p>This is an important card. It has two classes: 'card' and 'important'.</p>
+        <p class="highlight">This text is highlighted inside an important card.</p>
+    </div>
+</body>
+</html>

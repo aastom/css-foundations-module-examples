@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 - Specificity and The Cascade</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Internal Style: Higher specificity than external type selectors */
+        p {
+            color: navy; /* This will override external p color unless external is more specific */
+            font-style: italic;
+        }
+
+        #internal-id-example {
+            background-color: lightgreen; /* This will have high specificity */
+            border: 2px solid darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Specificity and The Cascade</h1>
+
+    <p>This is a regular paragraph. Its color and style will depend on the cascade and specificity rules.</p>
+
+    <div class="container">
+        <p class="text-item" id="specific-paragraph" style="color: orange; font-weight: bold;">
+            <!-- Inline Style: Highest specificity score. Always wins unless !important is used. -->
+            This paragraph has an inline style (orange, bold). It will override other styles.
+        </p>
+    </div>
+
+    <p class="text-item">This paragraph has a class (.text-item). It should be affected by class-level styling.</p>
+
+    <div id="internal-id-example">
+        <p>This paragraph is inside a div with an ID (#internal-id-example) and has a class (.text-item).
+           Its direct parent also has an ID, which contributes to the specificity of styles targeting it.</p>
+    </div>
+
+    <p class="text-item another-class">This paragraph has two classes. More classes don't directly increase specificity, but if rules target both, it helps.</p>
+
+    <h2>Understanding Inheritance</h2>
+    <div class="parent-with-inherited-style">
+        <p>This paragraph is inside a parent div with a red text color set. Its color will be inherited from its parent, unless overridden.</p>
+        <span>This span also inherits the red color.</span>
+        <p class="override-color">This paragraph overrides the inherited color with its own specific style.</p>
+    </div>
+
+    <div class="important-example">
+        <p>This text is meant to show the effect of <code>!important</code>. This will try to be blue.</p>
+        <p class="!important-demo">This text uses <code>!important</code> to force its style. It should be red, overriding other rules.</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,118 @@
+/*
+ * src/03-specificity-cascade/style.css
+ * Specificity and The Cascade Examples
+ *
+ * This file illustrates how CSS rules are applied and resolved based on
+ * their source (cascade) and their selector's weight (specificity).
+ */
+
+/* Universal Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #fce4ec; /* Light pink background */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #880e4f;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- Cascade Example --- */
+/* This will be overridden by the internal stylesheet's 'p' rule because internal styles (defined later in the HTML) take precedence over external styles of equal specificity. */
+p {
+    background-color: #f8bbd0; /* External style for paragraphs */
+    padding: 8px;
+    margin-bottom: 10px;
+    border-left: 5px solid #d81b60;
+}
+
+/* --- Specificity Examples --- */
+
+/* Type Selector (Low Specificity: 0,0,0,1) */
+div {
+    border: 1px solid #c2185b;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+/* Class Selector (Higher Specificity: 0,0,1,0) */
+.text-item {
+    color: #ad1457; /* This will override the 'p' type selector's color */
+    font-size: 1.1em;
+    background-color: #f48fb1;
+}
+
+/* ID Selector (Even Higher Specificity: 0,1,0,0) */
+/* The inline style on #specific-paragraph will still win due to inline having highest specificity */
+#specific-paragraph {
+    color: #e91e63; /* This will be overridden by the inline style (orange) */
+    background-color: #f06292;
+    padding: 12px;
+    border: 2px dashed #ad1457;
+}
+
+/* Chained Class Selector (Specificiy: 0,0,2,0) */
+/* More specific than a single class, but still less than an ID */
+.text-item.another-class {
+    background-color: #c2185b;
+    color: white;
+    font-weight: bold;
+}
+
+/* Combining ID and Class Selector (Specificity: 0,1,1,0) */
+/* This targets a paragraph with class 'text-item' inside an element with ID 'internal-id-example' */
+#internal-id-example p.text-item {
+    background-color: #880e4f;
+    color: white;
+    padding: 15px;
+    border: 3px solid #4a142c;
+}
+
+/* --- Inheritance Example --- */
+.parent-with-inherited-style {
+    color: #d32f2f; /* Red text color, will be inherited by children */
+    border: 1px solid #ef9a9a;
+    padding: 15px;
+    margin-top: 30px;
+    background-color: #fff3e0;
+}
+
+.parent-with-inherited-style span {
+    /* Spans will inherit the red color from their parent */
+    font-size: 0.9em;
+}
+
+.override-color {
+    color: #2e7d32; /* Green color, overrides the inherited red */
+    font-weight: bold;
+}
+
+/* --- !important Example --- */
+.important-example {
+    margin-top: 30px;
+    background-color: #e3f2fd;
+    padding: 15px;
+    border: 1px solid #90caf9;
+}
+
+.important-example p {
+    color: blue; /* This rule attempts to make text blue */
+}
+
+.important-example p.!important-demo {
+    /* The !important keyword makes this rule override almost anything else, */
+    /* including inline styles, regardless of specificity, but it's a bad practice */
+    /* to overuse it as it makes debugging very difficult. */
+    color: red !important;
+    font-weight: bold;
+}

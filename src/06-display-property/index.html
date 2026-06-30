@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - The CSS Display Property</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>The CSS <code>display</code> Property</h1>
+
+    <p>The <code>display</code> property is fundamental to how elements behave and interact with other elements on a web page.</p>
+
+    <section>
+        <h2><code>display: block</code></h2>
+        <p>Block-level elements always start on a new line and take up the full width available. Examples include `div`, `p`, `h1`-`h6`.</p>
+        <div class="block-element-one">Block Element 1</div>
+        <div class="block-element-two">Block Element 2</div>
+        <span>This is an inline element next to block elements. Notice how blocks force new lines.</span>
+    </section>
+
+    <section>
+        <h2><code>display: inline</code></h2>
+        <p>Inline elements do not start on a new line and only take up as much width as necessary. Examples include `span`, `a`, `img`.</p>
+        <span class="inline-element-one">Inline Element 1</span>
+        <span class="inline-element-two">Inline Element 2</span>
+        <a href="#" class="inline-element-link">Inline Link</a>
+        <div>This is a block element next to inline elements.</div>
+        <p>Inline elements do not respect `width`, `height`, `margin-top`, `margin-bottom` properties. They respect `padding` and `margin-left/right`.</p>
+    </section>
+
+    <section>
+        <h2><code>display: inline-block</code></h2>
+        <p>Inline-block elements behave like inline elements (they don't force a new line) but can also have `width`, `height`, and vertical `margin`/`padding` applied.</p>
+        <div class="inline-block-element">Inline-Block 1</div>
+        <div class="inline-block-element">Inline-Block 2</div>
+        <div class="inline-block-element">Inline-Block 3</div>
+        <p>Useful for creating horizontal navigation items, cards, or grid items that need specific dimensions.</p>
+    </section>
+
+    <section>
+        <h2><code>display: none</code></h2>
+        <p><code>display: none</code> completely removes an element from the document flow. It won't take up any space and is effectively invisible.</p>
+        <div class="hidden-element">You shouldn't see this element. It has <code>display: none</code>.</div>
+        <p>This paragraph comes after the hidden element, demonstrating that the hidden element takes up no space.</p>
+    </section>
+
+</body>
+</html>

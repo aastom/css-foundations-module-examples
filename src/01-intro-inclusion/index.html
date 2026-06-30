@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 - Introduction to CSS & Inclusion Methods</title>
+    <!-- Internal Stylesheet: Styles defined directly in the <head> section -->
+    <style>
+        /* CSS comments start with /* and end with */ */
+        /* This style applies to all <h2> elements */
+        h2 {
+            color: purple; /* Internal CSS makes this heading purple */
+            text-decoration: underline;
+        }
+    </style>
+    <!-- External Stylesheet: Best practice for larger projects -->
+    <!-- The browser fetches this file and applies its styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS Inclusion Methods</h1>
+
+    <p style="color: blue; font-weight: bold;">
+        <!-- Inline Style: Applied directly to an HTML element using the 'style' attribute. -->
+        <!-- Use sparingly for production, mainly for quick tests or very specific, single-use styles. -->
+        This paragraph has inline styles. Its text is blue and bold.
+    </p>
+
+    <h2>This is an H2 heading styled with Internal CSS.</h2>
+
+    <p class="external-style-example">
+        <!-- External Style: This paragraph gets its styling from the 'style.css' file. -->
+        This paragraph is styled using an external stylesheet.
+        It should have a green background and red text from `style.css`.
+    </p>
+
+    <div id="combination-example">
+        <h3>Combining Styles</h3>
+        <p style="font-style: italic;">
+            <!-- This paragraph has an inline style (italic) and also gets styles from the external stylesheet (e.g., border). -->
+            This text is italic (inline style) and also has a border (external style).
+            This demonstrates how styles can combine from different sources.
+        </p>
+    </div>
+
+    <p>
+        CSS stands for Cascading Style Sheets. It's used to style the look and formatting of documents written in HTML.
+        It separates the content (HTML) from the presentation (CSS).
+    </p>
+</body>
+</html>
